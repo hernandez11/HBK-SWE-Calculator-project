@@ -1,0 +1,153 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.--5DB3B0{
+  background-color: #5DB3B0;
+}
+
+.--2C6B89{
+  background-color:#2C6B89;
+}
+
+.--113357{
+  background-color:#113357;
+}
+
+#bold{
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.app{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #F5F5F5;
+}
+
+/* HEADER */
+.header{
+  width: 90vw;
+  height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: auto;
+}
+
+.header__img{
+  width: 250px;
+  height: auto;
+}
+
+/* PALLETE */
+.pallete{
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+}
+
+.pallete__cir{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+/* CALCULATOR */
+.calc__container{
+  margin: 50px auto;
+  width: 85vw;
+  max-width: 400px;
+  text-align: center;
+  border: 25px solid #113357;
+  background-color: #113357;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc__keypad{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(60px, auto);
+  margin-top: 25px;
+}
+
+.calc__keypad> button{
+  min-width: 80px;
+  height: 80px;
+  border: 1px solid #FFFFFF;
+  border-radius: 50px;
+  background-color: #2C6B89;
+  margin: 5px;
+}
+
+.screen__wrapper{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  height: 100%;
+  min-height: 75px;
+  padding: 15px 0;
+  width: 100%;
+  border-bottom: 2px solid #5DB3B0;
+  color: #fff;
+}
+
+.screen{
+  padding: 0 5px;
+  font-size: 30px;
+  font-weight: normal;
+  white-space: pre-wrap;
+
+}
+
+.highlight{
+  background-color: #5DB3B0 !important;
+}
+
+#result{
+  grid-column: 3/5;
+  grid-row: 5;
+}
+
+.prevNums__img{
+  width: 25px;
+}
+
+@media only screen and (max-width: 768px){
+  .pallete{
+    display: none;
+  }
+  .calc__container{
+    margin: 35px auto;
+  }
+  .calc__keypad> button{
+  }
+}
+@media only screen and (max-width: 468px){
+  .calc__container{
+    width: 80vw;
+    margin: 25px auto;
+  }
+  .calc__keypad> button{
+    min-width: 60px;
+    height: 60px;
+  }
+  .screen__wrapper{
+    min-height: 40px;
+  }
+  .screen{
+    font-size: 20px;
+  }
+}
